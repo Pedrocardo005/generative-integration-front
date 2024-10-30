@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "generative-integration:build:production"
+              "buildTarget": "generative-integration:build:production"
             },
             "development": {
-              "browserTarget": "generative-integration:build:development"
+              "buildTarget": "generative-integration:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "generative-integration:build"
+            "buildTarget": "generative-integration:build"
           }
         },
         "test": {
@@ -100,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "7e147175-6fff-457c-b913-73f4d898b365"
   }
 }
