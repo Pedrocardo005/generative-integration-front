@@ -1,0 +1,18 @@
+<div class="content">
+  <div class="chats">
+    @for (chat of chats; track $index) {
+    <app-chat [chat]="chat"></app-chat>
+    }
+  </div>
+</div>
+<form class="generation-form">
+  <mat-form-field class="generation-full-width">
+    <input matInput placeholder="Digite seu texto aqui" />
+    <mat-icon
+      aria-hidden="false"
+      aria-label="Ícone de busca"
+      fontIcon="search"
+      matSuffix
+    ></mat-icon>
+  </mat-form-field>
+</form>

@@ -1,0 +1,9 @@
+<div class="chat-content">
+  <p class="text-input">{{ chat.text_input }}</p>
+
+  @if (chat.gemini_output.length > 0) {
+  <p class="gemini-output">{{ chat.gemini_output }}</p>
+  } @else {
+  <ngx-skeleton-loader count="3"></ngx-skeleton-loader>
+  }
+</div>
