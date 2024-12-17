@@ -7,7 +7,11 @@
 </div>
 <form class="generation-form">
   <mat-form-field class="generation-full-width">
-    <input matInput placeholder="Digite seu texto aqui" />
+    <input
+      matInput
+      placeholder="Digite seu texto aqui"
+      (keydown.enter)="sendQuestion($event)"
+    />
     <mat-icon
       aria-hidden="false"
       aria-label="Ícone de busca"
