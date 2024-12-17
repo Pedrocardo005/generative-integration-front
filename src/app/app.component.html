@@ -1,5 +1,5 @@
 <div class="content">
-  <div class="chats">
+  <div #scrollContainer class="chats">
     @for (chat of chats; track $index) {
     <app-chat [chat]="chat"></app-chat>
     }
@@ -10,7 +10,11 @@
     <input
       matInput
       placeholder="Digite seu texto aqui"
-      (keydown.enter)="sendQuestion($event)"
+      (keydown.enter)="sendQuestion()"
+      type="text"
+      [disabled]="inputDisabled"
+      [(ngModel)]="inputValue"
+      [ngModelOptions]="{ standalone: true }"
     />
     <mat-icon
       aria-hidden="false"
