@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
   sendQuestion() {
     const voidChat: Chat = {
       gemini_output: '',
-      text_input: '',
+      text_input: this.inputValue,
     };
 
     this.chats.push(voidChat);
