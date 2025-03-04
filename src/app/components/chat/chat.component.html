@@ -2,7 +2,9 @@
   <p class="text-input">{{ chat.text_input }}</p>
 
   @if (chat.gemini_output.length > 0) {
-  <p class="gemini-output" [innerHTML]="chat.gemini_output"></p>
+  <markdown class="gemini-output">
+    {{ chat.gemini_output }}
+  </markdown>
   } @else {
   <ngx-skeleton-loader count="3"></ngx-skeleton-loader>
   }
